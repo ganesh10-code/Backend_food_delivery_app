@@ -8,7 +8,7 @@ const productRoutes = require("./routes/productRoutes");
 const path = require("path");
 
 const app = express();
-const port = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 dotEnv.config();
 
@@ -23,8 +23,8 @@ app.use("/firm", firmRoutes);
 app.use("/product", productRoutes);
 app.use("/uploads", express.static("uploads"));
 
-app.listen(port, () => {
-  console.log(`Server started and running at ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server started and running at ${PORT}`);
 });
 app.use("/", (req, res) => {
   res.send("<h1>Welcome to Food Delivery</h1>");
