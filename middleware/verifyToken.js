@@ -1,4 +1,4 @@
-const Vendor = require("../model/vendor");
+const Vendor = require("../model/Vendor");
 const jwt = require("jsonwebtoken");
 const dotEnv = require("dotenv");
 
